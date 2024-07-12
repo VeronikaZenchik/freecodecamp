@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="style.css">
   <title>Survey Form</title>
 </head>
+
 <body>
   <h1 id="title">freeCodeCamp Survey Form</h1>
-    <p id="description">Thank you for taking the time to help us improve the platform</p>
-    <form id="survey-form" >
-      <label id="name-label" for="name">
-      <input id="name" type="text" required placeholder="Enter your name">
+  <p id="description">Thank you for taking the time to help us improve the platform</p>
+  <form id="survey-form"
+    action='https://survey-form.freecodecamp.rocks/?name=Jan&email=jan.mlinaric%40gmail.com&age=22&role=student&user-recommend=definitely&mostLike=challenges&prefer=back-end-projects&comment=a'>
+    <label id="name-label">Name <input type="text" placeholder="Put your name" id="name" required /></label>
+    <label id="email-label" placeholder="Email">Email <input placeholder="example@email.com" type="email" required
+        id="email" />
+      <label>Password <input type="password" placeholder="****" pattern="[a-z0-5]{8,}" required /> </label>
+      <label id="number-label"> Whats your age? <input type="number" placeholder="Age" min="15" max="75" id="number" />
       </label>
-      <label id="email-label" for="email">
-      <input id="email" type="email" required placeholder="Enter your Email">
-      </label>
-      <label id="number-label" for="number">
-      <input id="number" type="number" placeholder="Age" min="1" max="2">
-      </label>
+  </form>
+  <form name="options">
+    <label>This is an option chooser</laber>
       <select id="dropdown">
-        <optional>HTML</optional>
-        <optional>CSS</optional>
-        <optional>JS</optional>
-        </select>
-        <fieldset>
-          <ledend>Would you recommend freeCodeCamp to a friend?</ledend>
-        <label for="definitely">Definitely
-<input id="definitely" type="radio" name="account-type" class="definitely" value="definitely" checked /> 
-        </label>
-        <label for="maybe">
-          Maybe
-          <input id="maybe" type="radio" name="friend" class="friend" value="maybe"/>
-          </label>
-           <label for="notsure">
-            Not sure
-          <input id="notsure" type="radio" name="friend" class="friend"value="not sure"/>
-          </label>
-          </fieldset>
-    </form>
-    <label for="terms-and-conditions">
-        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
-      </label>
-      <label for="survey-form">Provide a bio:
-          <textarea id="survey-form" name="survey-form" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
-          <label for="Submit">
-          <input type="submit" value="Submit" />
-          </label>
-  
+        <option>Chooose an option</option>
+        <option>Option 1</option>
+        <option>Option 2 </option>
+        <option>Option 3</option>
+      </select>
+  </form>
+
+  <label id="group1">Would you recommend freeCodeCamp to a friend?<br>
+    <br>
+    <label>Definitely<input type="radio" name="group1" value="Definitely"></label><br>
+    <label>Not sure<input type="radio" name="group1" value="Not sure"></label><br>
+    <br>
+    <br></label> <label id="group-checkbox">What would you like to see improved?<br>
+    <br>
+    <label><input name="cb1" type="checkbox" value="1">Front-end Projects</label><br>
+    <label><input name="cb2" type="checkbox" value="2">Back-end Projects</label><br>
+    <label><input name="cb3" type="checkbox" value="3">Data Visualization</label><br>
+    <label><input name="cb4" type="checkbox" value="4">Challenges</label><br>
+    <label><input name="cb5" type="checkbox" value="5">Open Source Community</label><br>
+  </label><br>
+  <br>
+  <label id="group2">What type of person are you?<br>
+    <br>
+    <label>Type A<input type="radio" name="group2" value="Type A"></label><br>
+    <label>Type B<input type="radio" name="group2" value="Type B"></label><br 
+    <label for="survey-form">Provide a bio:
+    <textarea id="survey-form" name="survey-form" rows="3" cols="30"
+      placeholder="I like coding on the beach..."></textarea>
+    </label>
+  </label>
+  <fieldset>
+    <input type="submit" value="Submit" id="submit" />
+  </fieldset>
+  </form>
 </body>
-</body>
+
 </html>
